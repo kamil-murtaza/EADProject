@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "../_LogReg.cshtml";
+    ViewBag.Title = "Register";
+}
+<html>
+    <head>
+        <title> Registration</title>
+    </head>
+    <body>
+            <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../images/big_image_1.jpg);">
+      <div class="container">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+          <div class="col-md-8 text-center">
+
+            <div class="mb-5 element-animate">
+              <h1>Register</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+    <section class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 box">
+            <h2 class="mb-5">Register new account</h2>
+            <form action="#" method="post">
+                  
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control " required onkeypress="return checkName(window.event)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="name">CNIC</label>
+                  <input type="text" id="cnic" class="form-control " required onkeypress="return validCNIC(window.event,this)" onblur="checkCNIC()" maxlength="15">
+                  <div id="cerror" style="color:red;"></div>
+                </div>
+              </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Email Address</label>
+                      <input type="text" id="email" class="form-control " required onblur="validMail()">
+                      <div style="color:red;" id="vemail"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Password</label>
+                      <input type="password" class="form-control " required id="pass1">
+                    </div>
+                  </div>
+                  <div class="row mb-5">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Re-type Password</label>
+                      <input type="password" class="form-control " required id="pass2" onblur="check()">
+                      <div style="color:red;" id="valid"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input type="submit" value="Login" class="btn btn-primary" onclick="check()">
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    </body>
+</html>

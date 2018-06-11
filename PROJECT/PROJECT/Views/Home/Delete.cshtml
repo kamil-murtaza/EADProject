@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "../_LayHome.cshtml";
+    ViewBag.Title = "Delete";
+}
+<html>
+    <head>
+        <title>
+            Delete Student
+        </title>
+    </head>
+    <body>
+            <section class="site-hero site-hero-innerpage overlay" data-stellar-background-ratio="0.5" style="background-image: url(../images/big_image_1.jpg);">
+      <div class="container">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+          <div class="col-md-8 text-center">
+
+            <div class="mb-5 element-animate">
+              <h1>Delete Student</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+    <section class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5 box">
+            <h2 class="mb-5">Delete Student</h2>
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Roll No.</label>
+                      <input type="text" class="form-control " required id="roll" onblur="checkRoll()" maxlength="5" placeholder="Enter Student's Roll no. here">
+                        <button style="background:blue;color:white;border:none;"> SEARCH</button>
+                      <div style="color:red;" id="vroll"></div>
+                    </div>
+                  </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" class="form-control " required onkeypress="return checkName(window.event)">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="name">CNIC</label>
+                  <input type="text" id="cnic" class="form-control " required onkeypress="return validCNIC(window.event,this)" onblur="checkCNIC()" maxlength="15">
+                  <div id="cerror" style="color:red;"></div>
+                </div>
+              </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <label for="name">Email Address</label>
+                      <input type="text" id="email" class="form-control " required onblur="validMail()">
+                      <div style="color:red;" id="vemail"></div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-md-12 form-group">
+                      <label for="name">CGPA</label>
+                      <input type="text" class="form-control " required id="cgpa" onblur="checkCGPA()" maxlength="3">
+                      <div style="color:red;" id="vcgpa"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input type="submit" value="Delete" class="btn btn-primary" onclick="check()">
+                    </div>
+                  </div>
+                </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+    </body>
+</html>
