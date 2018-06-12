@@ -39,9 +39,9 @@ namespace PROJECT.Controllers
         {
             return View();
         }
-        public ActionResult View()
-        {
-            return View();
-        }
+//        public ActionResult View()
+//        {
+//            return View();
+//        }
     }
 }
